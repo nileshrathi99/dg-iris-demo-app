@@ -1,9 +1,7 @@
 from flask import Flask, request, render_template
 import pickle
-import sklearn
 
 app = Flask(__name__)
-model = pickle.load(open('model.pk', 'rb'))
 
 dic = {0 : 'setosa',
        1 : 'versicolor',
@@ -15,7 +13,7 @@ def home():
 
 @app.route('/predict', methods = ['POST'])
 def predict():
- 
+    model = pickle.load(open('model.pk', 'rb'))
     # Read the input data from the request form
     sepal_length = float(request.form.get('sepal length'))
     sepal_width = float(request.form.get('sepal width'))
