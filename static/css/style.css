@@ -1,0 +1,31 @@
+html{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 10px;
+    background-color: #f1f1f1;
+    background-image: url('flower.webp');
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10%;
+    margin: 0;
+}
+  
+.container {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.prediction {
+    font-size: 15px;
+    font-weight: bold;
+    color: hsl(0, 70%, 29%);
+}
+
+h1 {
+    color: hsl(0, 0%, 100%);
+    text-shadow: 2px 2px 4px #000000;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+    <head>
+        <title>Predict Iris Flower </title>
+        <link rel="stylesheet" type = "text/css" href="{{ url_for('static', filename = 'css/style.css') }}" />
+        </head>
+    <body>
+        <div class="container">
+        
+            <h1>Predict Iris Flower</h1>
+
+            <form action = "{{ url_for('predict')}}" method = 'post'>
+                <input type = 'text' name = 'sepal length' placeholder="sepal length" required = "required" />
+                <input type = 'text' name = 'sepal width' placeholder="sepal width" required = "required" />
+                <input type = 'text' name = 'petal length' placeholder="petal length" required = "required" />
+                <input type = 'text' name = 'petal width' placeholder="petal width" required = "required" />
+
+                <button type = 'submit'> Predict </button>
+            </form>
+
+            <br>
+            <br>
+            <div class="prediction-box">
+                <p class="prediction">{{ prediction_text }}</p>
+            </div>
+            <!-- <p class="prediction">{{ prediction_text }}</p> -->
+        </div>
+    </body>
+</html>
