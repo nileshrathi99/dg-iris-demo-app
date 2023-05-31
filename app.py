@@ -1,5 +1,6 @@
 from flask import Flask, request, render_template
 import pickle
+import sklearn
 
 app = Flask(__name__)
 model = pickle.load(open('model.pk', 'rb'))
