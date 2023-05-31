@@ -30,4 +30,5 @@ def predict():
     # # Return the predicted output as a response
     return render_template('index.html', prediction_text = 'Flower is {}'.format(dic[predicted_class[0]]))
 
-app.run(port=8080)
+if __name__ == '__main__':
+    app.run(debug=True)
