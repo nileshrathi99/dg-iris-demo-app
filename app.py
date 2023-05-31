@@ -13,6 +13,7 @@ def home():
 
 @app.route('/predict', methods = ['POST'])
 def predict():
+    
     model = pickle.load(open('model.pk', 'rb'))
     # Read the input data from the request form
     sepal_length = float(request.form.get('sepal length'))
